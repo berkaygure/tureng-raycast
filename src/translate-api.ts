@@ -1,5 +1,6 @@
-export type Lang = "en" | "de" | "es" | "fr" | "tr";
 import { useFetch } from "@raycast/utils";
+
+export type Lang = "en" | "de" | "es" | "fr" | "tr";
 
 const BACKEND = `https://tureng-api.bgure.workers.dev/`;
 
