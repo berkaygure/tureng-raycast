@@ -1,4 +1,4 @@
-import { List } from "@raycast/api";
+import { Action, ActionPanel, List } from "@raycast/api";
 import { useState } from "react";
 import LangSelector, { DEFAULT_LANG, LangItem } from "./lang-selector";
 import { useTranslate } from "./translate-api";
@@ -21,8 +21,13 @@ export default function Translate() {
       {data.map((item) => (
         <List.Item
           key={item.key}
-          title={item.translated}
           subtitle={item.q}
+          title={item.translated}
+          actions={
+            <ActionPanel>
+              <Action.OpenInBrowser title="Open in Tureng" url={`https://tureng.com/${item.path}`} />
+            </ActionPanel>
+          }
           accessories={[
             {
               tag: item.category,

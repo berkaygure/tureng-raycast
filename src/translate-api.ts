@@ -1,7 +1,6 @@
 export type Lang = "en" | "de" | "es" | "fr" | "tr";
 import { useFetch } from "@raycast/utils";
 
-// ?sl=tr&tl=en&word=kitap
 const BACKEND = `https://tureng-api.bgure.workers.dev/`;
 
 export interface TranslatedResult {
@@ -9,6 +8,7 @@ export interface TranslatedResult {
   q: string;
   translated: string;
   key: string;
+  path: string;
 }
 
 /**
