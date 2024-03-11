@@ -2,19 +2,21 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "tureng-translate",
   "title": "Tureng Translate",
-  "description": "Translate a word or phrase from English to Turkish or vice versa",
-  "icon": "command-icon.png",
+  "description": "Translate a word or phrases using tureng.com",
+  "icon": "icon.png",
   "author": "berkaygure",
   "categories": [
-    "Productivity"
+    "Productivity",
+    "Web"
   ],
   "license": "MIT",
   "commands": [
     {
       "name": "translate",
       "title": "Translate",
-      "description": "Translate a word or phrase from English to Turkish or vice versa",
-      "mode": "view"
+      "description": "Translate a word or phrases using tureng.com",
+      "mode": "view",
+      "subtitle": "Tureng"
     }
   ],
   "dependencies": {
