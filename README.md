@@ -1,6 +1,6 @@
----
+
  **_NOTE:_**  This extension is not affiliated with Tureng. Also not published on Raycast's extension directory yet.
----
+
 
 # Tureng Translate Raycast Extension
 
@@ -18,6 +18,10 @@ This extension allows you to translate words and phrases between supported langu
 - English to Spanish
 
 ### Demo
+
+
+https://github.com/berkaygure/tureng-raycast/assets/5683957/b244c2e9-2400-4289-9301-d7e413e52eb8
+
 
 ### Usage
 
