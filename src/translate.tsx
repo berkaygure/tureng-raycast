@@ -6,7 +6,7 @@ import { useTranslate } from "./translate-api";
 export default function Translate() {
   const [searchText, setSearchText] = useState("");
   const [lang, setLang] = useState<LangItem>(DEFAULT_LANG);
-  const { data = [], isLoading } = useTranslate(searchText, lang.source, lang.target);
+  const { data = [], isLoading, total, hasResults } = useTranslate(searchText, lang.source, lang.target);
 
   return (
     <List
@@ -37,13 +37,13 @@ export default function Translate() {
       ))}
 
       <List.Item
-        title="View more results"
-        subtitle="Open Tureng in your browser"
+        title={hasResults ? `Viw more results (${total})` : "Go to Tureng.com"}
+        subtitle="Go to Tureng.com"
         actions={
           <ActionPanel>
             <Action.OpenInBrowser
               title="Open in Tureng"
-              url={data.length > 0 ? `https://tureng.com/${data[0].path}` : "https://tureng.com"}
+              url={hasResults ? `https://tureng.com/${data[0].path}` : "https://tureng.com"}
             />
           </ActionPanel>
         }
