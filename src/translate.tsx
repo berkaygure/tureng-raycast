@@ -35,6 +35,19 @@ export default function Translate() {
           ]}
         />
       ))}
+
+      <List.Item
+        title="View more results"
+        subtitle="Open Tureng in your browser"
+        actions={
+          <ActionPanel>
+            <Action.OpenInBrowser
+              title="Open in Tureng"
+              url={data.length > 0 ? `https://tureng.com/${data[0].path}` : "https://tureng.com"}
+            />
+          </ActionPanel>
+        }
+      />
     </List>
   );
 }
